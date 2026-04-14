@@ -9,7 +9,69 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <!-- Форму размещай тут -->
+    <form action="/pets/orders" method="POST">
+        
+        <!-- 1. name -->
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" placeholder="Иван Иванов" value="Петр Петров" required>
+        <br><br>
+
+        <!-- 2. petType -->
+        <label for="petType">Тип питомца:</label>
+        <select id="petType" name="petType" required>
+            <option value="">-- Выберите --</option>
+            <option value="dog" selected>Собака</option>
+            <option value="cat">Кошка</option>
+            <option value="hamster">Хомяк</option>
+            <option value="parrot">Попугай</option>
+            <option value="rabbit">Кролик</option>
+        </select>
+        <br><br>
+
+        <!-- 3. gender -->
+        <label>Пол питомца:</label>
+        <input type="radio" id="boy" name="gender" value="boy" required>
+        <label for="boy">Мальчик</label>
+        <input type="radio" id="girl" name="gender" value="girl" required>
+        <label for="girl">Девочка</label>
+        <input type="radio" id="none" name="gender" value="none" checked required>
+        <label for="none">Не указан</label>
+        <br><br>
+
+        <!-- 4. eyeColor - тип color (HEX) -->
+        <label for="eyeColor">Цвет глаз:</label>
+        <input type="color" id="eyeColor" name="eyeColor" value="#895129" required>
+        <br><br>
+
+        <!-- 5. tailLength - тип number -->
+        <label for="tailLength">Длина хвоста (см):</label>
+        <input type="number" id="tailLength" name="tailLength" min="0" step="0.1" placeholder="15.5" value="20" required>
+        <br><br>
+
+        <!-- 6. dateOfBirth - тип date -->
+        <label for="dateOfBirth">Дата рождения питомца:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" value="2022-01-01" required>
+        <br><br>
+
+        <!-- 7. email - тип email -->
+        <label for="email">Ваш Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.ru" value="user@example.com" required>
+        <br><br>
+
+        <!-- 8. phone - тип tel -->
+        <label for="phone">Ваш Телефон:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9+\-\s()]*" placeholder="+7 (999) 123-45-67" value="+7 999 123 45 67" required>
+        <br><br>
+
+        <!-- 9. rules - тип checkbox -->
+        <input type="checkbox" id="rules" name="rules" value="true" checked required>
+        <label for="rules">Я согласен с правилами усыновления</label>
+        <br><br>
+
+        <button type="submit">Отправить заявку</button>
+        <button type="reset">Сбросить значения</button>
+    </form>
 
 </main>
 </body>
